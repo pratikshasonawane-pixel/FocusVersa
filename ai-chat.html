@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Study Chat</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="page-wrapper">
+
+  <!-- HEADER -->
+  <div class="page-header">
+
+    <h1 class="page-title">🤖 AI Study Assistant</h1>
+
+    <a href="index.html">
+      <button class="back-btn">🏠 Home</button>
+    </a>
+
+  </div>
+
+  <!-- CHAT BOX -->
+  <div class="glass-card" id="chatBox" style="height:400px;overflow-y:auto;">
+
+    <div class="ai-msg">
+      👋 Hi! I am your AI Study Assistant. Ask me anything about your studies.
+    </div>
+
+  </div>
+
+  <!-- INPUT -->
+  <div style="display:flex;gap:10px;margin-top:15px;">
+
+    <input id="userInput"
+      placeholder="Ask: make study plan for Java..."
+      style="flex:1;padding:12px;border-radius:10px;border:none;">
+
+    <button onclick="sendMsg()">Send</button>
+  </div>
+
+</div>
+
+<script src="ai-chat.js"></script>
+
+</body>
+</html>

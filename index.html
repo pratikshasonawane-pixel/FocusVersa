@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>FocusVerse ✨</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ========================= -->
+  <!-- MAIN CONTAINER -->
+  <!-- ========================= -->
+
+  <div class="container">
+
+    <!-- ========================= -->
+    <!-- SIDEBAR -->
+    <!-- ========================= -->
+
+    <aside class="sidebar">
+
+      <div class="logo">
+        FocusVerse ✨
+      </div>
+
+      <div class="menu">
+
+        <a href="#" class="active">
+          🏠 Home
+        </a>
+
+        <a href="tasks.html">
+          ✅ Tasks
+        </a>
+
+        <a href="focus.html">
+          ⏳ Focus
+        </a>
+
+        <a href="notes.html">
+          📝 Notes
+        </a>
+
+        <a href="stats.html">
+          📊 Stats
+        </a>
+
+        <a href="prep.html">
+          💼 Interview Prep
+        </a>
+
+        <a href="theme.html">
+          ⚙️ Theme
+        </a>
+
+        <a href="planner.html">
+           🧠 AI Planner
+        </a> 
+        
+        <a href="ai-chat.html">
+           🤖 AI Assistant
+        </a>
+
+      </div>
+
+    </aside>
+
+    <!-- ========================= -->
+    <!-- MAIN CONTENT -->
+    <!-- ========================= -->
+
+    <main class="main">
+
+      <!-- ========================= -->
+      <!-- TOPBAR -->
+      <!-- ========================= -->
+
+      <div class="topbar">
+
+        <!-- SEARCH -->
+        <div class="search-box">
+          <input
+            type="text"
+            placeholder="Search anything..."
+          >
+        </div>
+
+        <!-- TOP ICONS -->
+        <div class="top-icons">
+
+          <!-- THEME -->
+          <button class="icon-btn" id="themeToggle">
+            🌙
+          </button>
+
+          <!-- NOTIFICATION -->
+          <button class="icon-btn">
+            🔔
+          </button>
+
+          <!-- MENU -->
+          <button class="icon-btn" id="menuToggle">
+            ☰
+          </button>
+
+          <!-- PROFILE MENU -->
+          <div class="profile-menu" id="profileMenu">
+
+            <div class="profile-card">
+
+              <h3>
+                Pratiksha ✨
+              </h3>
+
+              <p>
+                🔥 5 Day Study Streak
+              </p>
+
+            </div>
+
+            <button>👤 Profile</button>
+            <button>🎨 Themes</button>
+            <button>⚙️ Settings</button>
+            <button>🗑️ Trash</button>
+            <button>🚪 Logout</button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ========================= -->
+      <!-- HERO SECTION -->
+      <!-- ========================= -->
+
+      <section class="hero">
+
+  <h1>Welcome Back, Pratiksha ✨</h1>
+
+  <p>Stay focused. Stay growing.</p>
+
+  <div class="card-grid">
+
+    <div class="glass-card">
+      🧠 AI Study Status<br>
+      <strong>Good Focus Today</strong>
+    </div>
+
+    <div class="glass-card">
+      🔥 Streak<br>
+      <strong>5 Days</strong>
+    </div>
+
+    <div class="glass-card">
+      ⏳ Study Time<br>
+      <strong>2h 30m</strong>
+    </div>
+
+  </div>
+
+</section>
+
+      <!-- ========================= -->
+      <!-- STATS CARDS -->
+      <!-- ========================= -->
+
+      <section class="cards">
+
+        <!-- CARD 1 -->
+        <div class="card">
+
+          <p>Tasks Done</p>
+
+          <h2 id="taskCount">
+            0
+          </h2>
+
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card">
+
+          <p>Focus Hours</p>
+
+          <h2>
+            12h
+          </h2>
+
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="card">
+
+          <p>CGPA</p>
+
+          <h2>
+            8.9
+          </h2>
+
+        </div>
+
+      </section>
+
+      <!-- ========================= -->
+      <!-- MAIN GRID -->
+      <!-- ========================= -->
+
+      <section class="grid-layout">
+
+        <!-- ========================= -->
+        <!-- TASK SECTION -->
+        <!-- ========================= -->
+
+        <div class="tasks">
+
+          <div class="section-title">
+
+            <h2>
+              Today's Tasks
+            </h2>
+
+          </div>
+
+          <!-- TASK INPUT -->
+          <div class="task-input">
+
+            <input
+              type="text"
+              id="taskInput"
+              placeholder="Add a task..."
+            >
+
+            <button id="addTaskBtn">
+             Add
+            </button>
+
+          </div>
+
+          <!-- TASK LIST -->
+          <div class="task-list" id="taskList"></div>
+
+        </div>
+
+        <!-- ========================= -->
+        <!-- RIGHT SECTION -->
+        <!-- ========================= -->
+
+        <div class="right-side">
+
+          <!-- NOTES -->
+          <div class="notes">
+
+            <div class="section-title">
+
+              <h2>
+                Sticky Notes
+              </h2>
+
+            </div>
+
+            <textarea
+              id="notes"
+              placeholder="Write your thoughts..."
+            ></textarea>
+
+          </div>
+
+          <!-- TIMER -->
+          <div class="timer">
+
+            <div class="section-title">
+
+              <h2>
+                Pomodoro Timer
+              </h2>
+
+            </div>
+
+            <div class="timer-box">
+
+              <div class="timer-display" id="timer">
+                25:00
+              </div>
+
+              <button id="startTimerBtn">
+                Start Focus
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- ========================= -->
+  <!-- MOBILE NAVIGATION -->
+  <!-- ========================= -->
+
+  <div class="mobile-nav">
+
+    <a href="#">🏠</a>
+    <a href="#">✅</a>
+    <a href="#">⏳</a>
+    <a href="#">📝</a>
+    <a href="#">⚙️</a>
+
+  </div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>
